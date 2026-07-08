@@ -1,18 +1,16 @@
+using System;
+using System.Windows.Forms;
 using ClientSchedule.Views;
-using ClientSchedule.Utilities;
 
 namespace ClientSchedule
 {
-    static class Program
+    internal static class Program
     {
         [STAThread]
         static void Main()
         {
-            Localization.Initialize();
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.LoginForm());
+            ApplicationConfiguration.Initialize();
+            Application.Run(new LoginForm());
         }
     }
 }
